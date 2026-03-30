@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: {{ .Values.ingress.hosts }}
+    - host: {{ .Values.ingress.hosts | quote  }}
       http:
         paths:
           - path: /

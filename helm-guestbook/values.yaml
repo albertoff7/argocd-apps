@@ -16,6 +16,7 @@ service:
   port: 80
 
 ingress:
+  name: guestbookhelm
   enabled: true
   annotations:
     {}
@@ -23,7 +24,7 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - guestbookhelm.apps.k8s
+    - guestbook-helm.apps.k8s
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:

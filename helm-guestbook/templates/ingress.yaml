@@ -9,15 +9,13 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-  {{- range .Values.ingress.hosts }}
-    - host: {{ . | quote }}
+    - host: {{ .Values.ingress.hosts | quote }}
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: {{ template "helm-guestbook.fullname" . }}
+                name: {{ .Values.service.name }}
                 port:
                   number: 80
-  {{- end }}

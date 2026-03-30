@@ -23,7 +23,7 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - guestbook-helm.apps.k8s
+    - guestbookhelm.apps.k8s
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:

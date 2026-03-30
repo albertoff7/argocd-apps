@@ -9,7 +9,8 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: {{ .Values.ingress.hosts }}
+  {{- range .Values.ingress.hosts }}
+    - host: {{ . | quote }}
       http:
         paths:
           - path: /
@@ -19,3 +20,4 @@ spec:
                 name: {{ .Release.Name }}
                 port:
                   number: 80
+  {{- end }}

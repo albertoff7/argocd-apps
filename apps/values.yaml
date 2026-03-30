@@ -3,7 +3,7 @@ config:
     destination:
       server: https://kubernetes.default.svc
     source:
-      repoURL: https://github.com/argoproj/argocd-example-apps
+      repoURL: https://github.com/albertoff7/argocd-apps.git
       targetRevision: master
 
 applications:
@@ -40,5 +40,5 @@ applications:
       plugin:
         name: nix
   - name: pre-post-sync
-  - name: sock-shop
+#  - name: sock-shop
   - name: sync-waves

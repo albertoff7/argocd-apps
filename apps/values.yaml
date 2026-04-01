@@ -4,7 +4,7 @@ config:
       server: https://kubernetes.default.svc
     source:
       repoURL: https://github.com/albertoff7/argocd-apps.git
-      targetRevision: master
+      targetRevision: main
 
 applications:
   - name: blue-green
